@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="certifications-page">
+
+    <div class="certifications-container">
+
+        <div class="certifications-header">
+
+            <div class="certifications-icon">
+                <i class="fa-solid fa-certificate"></i>
+            </div>
+
+            <h1>My Certifications</h1>
+
+            <p>
+                Professional certifications and qualifications
+                in software engineering, artificial intelligence,
+                and related technologies.
+            </p>
+
+        </div>
+
+        <div class="certifications-grid">
+
+            <!-- SOFTWARE ENGINEERING CERTIFICATE -->
+
+            <a href="{{ url_for('static', filename='certificates/software-engineering.pdf') }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-card"
+                data-pdf="{{ url_for('static', filename='certificates/software-engineering.pdf') }}">
+
+                <div class="certification-card-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="certification-card-content">
+
+                    <h2>Software Engineering</h2>
+
+                    <p class="certificate-provider">
+                        Masterschool
+                    </p>
+
+                    <p class="certificate-description">
+                        Software engineering certification covering
+                        Python, Flask, JavaScript, HTML, CSS, databases,
+                        APIs, Git, testing, and object-oriented programming.
+                    </p>
+
+                    <span class="certificate-button">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View Certificate
+                    </span>
+
+                </div>
+
+            </a>
+
+            <!-- AI ENGINEERING CERTIFICATE -->
+
+            <a href="{{ url_for('static', filename='certificates/ai-engineering.pdf') }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-card"
+                data-pdf="{{ url_for('static', filename='certificates/ai-engineering.pdf') }}">
+
+                <div class="certification-card-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div class="certification-card-content">
+
+                    <h2>AI Engineering</h2>
+
+                    <p class="certificate-provider">
+                        Artificial Intelligence
+                    </p>
+
+                    <p class="certificate-description">
+                        Training focused on artificial intelligence,
+                        Large Language Modules, prompt engineering, APIs, and
+                        AI-powered software applications.
+                    </p>
+
+                    <span class="certificate-button">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View Certificate
+                    </span>
+
+                </div>
+
+            </a>
+
+            <!-- PYTHON CERTIFICATE -->
+
+            <a href="{{ url_for('static', filename='certificates/hackathon.pdf') }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="certification-card"
+                data-pdf="{{ url_for('static', filename='certificates/hackathon.pdf') }}">
+
+                <div class="certification-card-icon">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+
+                <div class="certification-card-content">
+
+                    <h2>Python Programming</h2>
+
+                    <p class="certificate-provider">
+                        Programming & Software Development
+                    </p>
+
+                    <p class="certificate-description">
+                       Successfully completed the Python Innovation Hackathon, gaining hands-on experience in problem-solving, innovative design, project planning, Python development, and technical presentation. The hackathon strengthened practical software engineering skills through the development and presentation of a Python-based solution to a real-world challenge.
+                    </p>
+
+                    <span class="certificate-button">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View Certificate
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Modal for PDF preview -->
+    <div id="certModal" class="cert-modal hidden">
+        <div class="cert-modal-content">
+            <button id="closeCertModal" class="cert-modal-close">&times;</button>
+            <iframe id="certModalIframe" src="" frameborder="0" class="cert-modal-iframe"></iframe>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/certificate.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/certificate.js') }}"></script>
+{% endblock %}

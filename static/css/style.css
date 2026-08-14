@@ -10,6 +10,26 @@
 
 
 /* =========================================================
+   DATETIME DISPLAY & WEATHER WIDGET
+   ========================================================= */
+.datetime-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #e2e8f0;
+}
+.weather-widget {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+
+/* =========================================================
    HTML
    ========================================================= */
 

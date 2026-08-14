@@ -143,6 +143,76 @@
         rgba(34,211,238,0.2);
 }
 
+/* Appointment button */
+.add-appointment-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-appointment-btn:hover {
+    background: rgba(34,211,238,0.2);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+.modal.hidden { display: none; }
+.modal-content {
+    background: rgba(15,23,42,0.95);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    color: #e2e8f0;
+}
+.modal-content h3 { margin-top: 0; }
+.modal-content label { display: block; margin-top: 10px; }
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+}
+.modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-actions .primary {
+    background: rgba(34,211,238,0.2);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.modal-actions .secondary {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 
 .calendar-controls h2 {
     font-size: 18px;

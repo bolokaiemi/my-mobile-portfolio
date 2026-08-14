@@ -1,74 +1,68 @@
-
 /* =========================================================
-   MOBILE PAGE
+   RESET
    ========================================================= */
 
-.mobile-page {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 30px 15px;
-}
-
-
-/* =========================================================
-   PHONE
-   ========================================================= */
-
-.phone {
-    width: 100%;
-    max-width: 430px;
-    min-height: 850px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    border-radius: 42px;
+    padding: 20px;
 
     background:
         linear-gradient(
-            160deg,
-            #020617,
-            #0f172a,
-            #111827
+            135deg,
+            #1e1e2f,
+            #3a3a5a
         );
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.65);
-
-    display: flex;
-    flex-direction: column;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 
 /* =========================================================
-   STATUS BAR
+   MOBILE PHONE SCREEN
    ========================================================= */
 
-.status-bar {
-    display: flex;
+.screen {
+    width: 320px;
+    height: 600px;
 
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 
-    padding: 14px 22px 6px;
+    padding: 15px;
 
-    font-size: 13px;
+    border-radius: 40px;
 
-    color: #e2e8f0;
-}
+    background:
+        linear-gradient(
+            180deg,
+            #151515,
+            #0d0d0d
+        );
 
+    overflow-y: auto;
+    overflow-x: hidden;
 
-.status-icons {
-    display: flex;
-
-    gap: 8px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 
@@ -77,155 +71,266 @@
    ========================================================= */
 
 .app-header {
-    padding: 18px 22px 10px;
-}
-
-
-.app-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-}
-
-
-.app-logo {
-    width: 52px;
-    height: 52px;
-
-    flex-shrink: 0;
-
-    overflow: hidden;
-
-    border-radius: 15px;
-
-    border: 1px solid rgba(255,255,255,0.2);
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.3);
-}
-
-
-.app-logo img {
     width: 100%;
-    height: 100%;
 
-    object-fit: cover;
-}
+    text-align: center;
 
-
-.app-title h1 {
-    font-size: 23px;
-
-    font-weight: 700;
-}
-
-
-.app-title p {
-    margin-top: 4px;
-
-    color: #94a3b8;
-
-    font-size: 12px;
+    padding: 5px 0 12px;
 }
 
 
 /* =========================================================
-   DATE / TIME
+   STATUS INDICATOR
    ========================================================= */
 
-.datetime-container {
-    padding: 15px 22px;
-}
-
-
-.datetime-display {
+.status-indicator {
     display: flex;
 
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    gap: 5px;
-}
+    gap: 8px;
 
+    min-height: 42px;
 
-#currentDate {
-    color: #e2e8f0;
+    margin-bottom: 8px;
 
-    font-size: 15px;
+    color: #00e5ff;
 
-    font-weight: 500;
-}
+    font-size: 10px;
 
+    font-weight: 600;
 
-#currentTime {
-    color: #22d3ee;
-
-    font-size: 30px;
-
-    font-weight: 700;
+    text-transform: uppercase;
 
     letter-spacing: 1px;
 }
 
 
-.weather-widget {
-    display: flex;
+/* =========================================================
+   AI LOGO
+   ========================================================= */
 
-    align-items: center;
+.status-icon {
+    display: block;
 
-    gap: 8px;
+    object-fit: cover;
 
-    margin-top: 8px;
+    object-position: center;
 
-    color: #94a3b8;
+    border-radius: 12px;
 
-    font-size: 13px;
-}
+    background: #ffffff;
 
+    border: 2px solid rgba(0, 229, 255, 0.7);
 
-.weather-widget i {
-    color: #38bdf8;
+    box-shadow:
+        0 0 8px rgba(0, 229, 255, 0.35),
+        0 4px 12px rgba(0, 0, 0, 0.5);
+
+    flex-shrink: 0;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
 /* =========================================================
-   SEARCH
+   AI LOGO HOVER
    ========================================================= */
 
-.search-container {
-    padding: 8px 22px 15px;
+.status-icon:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 14px rgba(0, 229, 255, 0.65),
+        0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
 
-.search-box {
+/* =========================================================
+   STATUS DOT
+   ========================================================= */
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #00e676;
+
+    box-shadow:
+        0 0 8px rgba(0, 230, 118, 0.9);
+}
+
+
+/* =========================================================
+   APP TITLE
+   ========================================================= */
+
+.app-header h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 229, 255, 0.4);
+}
+
+
+/* =========================================================
+   HEADER SUBTITLE
+   ========================================================= */
+
+.header-subtitle {
+    margin-top: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 10px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   DATE & TIME
+   ========================================================= */
+
+.datetime-display {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 8px 5px 12px;
+
+    margin-bottom: 5px;
+    gap: 8px;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+#currentDate {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+
+    text-shadow:
+        0 1px 5px rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   TIME
+   ========================================================= */
+
+#currentTime {
+    display: block;
+
+    color: #00e5ff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.6);
+}
+
+
+/* =========================================================
+   SEARCH BAR
+   ========================================================= */
+
+.portfolio-search {
+    width: 100%;
+
+    height: 40px;
+
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 
-    padding: 12px 15px;
+    padding: 0 12px;
 
-    border-radius: 18px;
+    margin-bottom: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 22px;
 
     background:
         rgba(255, 255, 255, 0.08);
 
-    border:
-        1px solid rgba(255,255,255,0.1);
-
-    backdrop-filter: blur(15px);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
-.search-box i {
-    color: #94a3b8;
+/* =========================================================
+   SEARCH ICON
+   ========================================================= */
+
+.portfolio-search i {
+    color: #00e5ff;
+
+    font-size: 14px;
+
+    flex-shrink: 0;
 }
 
 
-.search-box input {
+/* =========================================================
+   SEARCH INPUT
+   ========================================================= */
+
+.portfolio-search input {
     width: 100%;
+
+    height: 100%;
 
     border: none;
 
@@ -233,92 +338,77 @@
 
     background: transparent;
 
-    color: white;
+    color: #ffffff;
 
-    font-size: 14px;
-}
-
-
-.search-box input::placeholder {
-    color: #64748b;
+    font-size: 13px;
 }
 
 
 /* =========================================================
-   APPLICATION AREA
+   SEARCH PLACEHOLDER
    ========================================================= */
 
-.applications {
-    flex: 1;
-
-    overflow-y: auto;
-
-    padding: 12px 22px 95px;
-}
-
-
-.applications::-webkit-scrollbar {
-    width: 5px;
-}
-
-
-.applications::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.2);
-
-    border-radius: 10px;
+.portfolio-search input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.55);
 }
 
 
 /* =========================================================
-   APPLICATION GRID
+   SEARCH FOCUS
    ========================================================= */
 
-.app-grid {
+.portfolio-search:focus-within {
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border-color:
+        rgba(0, 229, 255, 0.65);
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 229, 255, 0.15);
+}
+
+
+/* =========================================================
+   APPS GRID
+   ========================================================= */
+
+.apps {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 25px 14px;
+    gap: 18px 10px;
+
+    align-content: start;
+
+    padding-bottom: 25px;
 }
 
 
 /* =========================================================
-   APP ITEM
+   APP LINK
    ========================================================= */
 
-.app-item {
-    display: flex;
+.app {
+    display: block;
 
-    flex-direction: column;
+    width: 100%;
 
-    align-items: center;
+    min-width: 0;
 
-    gap: 8px;
+    text-decoration: none;
+
+    color: #ffffff;
 
     text-align: center;
 
-    transition:
-        transform 0.25s ease;
-}
-
-
-.app-item:hover {
-    transform: translateY(-5px);
-}
-
-
-.app-item:active {
-    transform: scale(0.94);
-}
-
-
-.app-item span {
-    color: #f8fafc;
-
-    font-size: 12px;
-
-    line-height: 1.2;
+    font-size: 11px;
 }
 
 
@@ -326,254 +416,328 @@
    APP ICON
    ========================================================= */
 
-.app-icon {
-    width: 62px;
-    height: 62px;
+.app i {
+    width: 55px;
+    height: 55px;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    border-radius: 19px;
+    margin:
+        0 auto 6px;
 
-    color: white;
+    border-radius: 16px;
 
-    font-size: 25px;
+    color: #ffffff;
+
+    font-size: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff512f,
+            #dd2476
+        );
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,0.3);
+        0 6px 12px rgba(0, 0, 0, 0.4);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
-.app-item:hover .app-icon {
+/* =========================================================
+   APP COLORS
+   ========================================================= */
+
+.app:nth-child(1) i {
+    background:
+        linear-gradient(
+            135deg,
+            #ff512f,
+            #dd2476
+        );
+}
+
+.app:nth-child(2) i {
+    background:
+        linear-gradient(
+            135deg,
+            #000000,
+            #434343
+        );
+}
+
+.app:nth-child(3) i {
+    background:
+        linear-gradient(
+            135deg,
+            #1877f2,
+            #00c6ff
+        );
+}
+
+.app:nth-child(4) i {
+    background:
+        linear-gradient(
+            135deg,
+            #e4405f,
+            #ff6a88
+        );
+}
+
+.app:nth-child(5) i {
+    background:
+        linear-gradient(
+            135deg,
+            #25d366,
+            #00c853
+        );
+}
+
+.app:nth-child(6) i {
+    background:
+        linear-gradient(
+            135deg,
+            #f7971e,
+            #ffd200
+        );
+}
+
+.app:nth-child(7) i {
+    background:
+        linear-gradient(
+            135deg,
+            #000000,
+            #25f4ee
+        );
+}
+
+.app:nth-child(8) i {
+    background:
+        linear-gradient(
+            135deg,
+            #0a66c2,
+            #4facfe
+        );
+}
+
+.app:nth-child(9) i {
+    background:
+        linear-gradient(
+            135deg,
+            #ff512f,
+            #ff9966
+        );
+}
+
+.app:nth-child(10) i {
+    background:
+        linear-gradient(
+            135deg,
+            #24292e,
+            #586069
+        );
+}
+
+.app:nth-child(11) i {
+    background:
+        linear-gradient(
+            135deg,
+            #8e2de2,
+            #4a00e0
+        );
+}
+
+.app:nth-child(12) i {
+    background:
+        linear-gradient(
+            135deg,
+            #00b09b,
+            #96c93d
+        );
+}
+
+.app:nth-child(13) i {
+    background:
+        linear-gradient(
+            135deg,
+            #ff9966,
+            #ff5e62
+        );
+}
+
+.app:nth-child(14) i {
+    background:
+        linear-gradient(
+            135deg,
+            #4776e6,
+            #8e54e9
+        );
+}
+
+
+/* =========================================================
+   APP HOVER
+   ========================================================= */
+
+.app:hover i {
     transform: scale(1.08);
 
     box-shadow:
-        0 14px 30px rgba(0,0,0,0.4);
+        0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
 
 /* =========================================================
-   ICON GRADIENTS
+   APP TEXT
    ========================================================= */
 
-.portfolio-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #7c3aed
-        );
-}
+.app span {
+    display: block;
 
+    color: #ffffff;
 
-.cinema-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #dc2626,
-            #7f1d1d
-        );
-}
+    font-size: 10px;
 
-
-.mobile-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #06b6d4,
-            #2563eb
-        );
-}
-
-
-.security-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #059669,
-            #064e3b
-        );
-}
-
-
-.auditor-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #f59e0b,
-            #ea580c
-        );
-}
-
-
-.music-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #ec4899,
-            #7c3aed
-        );
-}
-
-
-.github-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #374151,
-            #111827
-        );
-}
-
-
-.linkedin-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #0077b5,
-            #0c4a6e
-        );
-}
-
-
-.contact-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #06b6d4,
-            #0e7490
-        );
-}
-
-
-.calendar-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #ef4444,
-            #991b1b
-        );
-}
-
-
-.cv-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #8b5cf6,
-            #4c1d95
-        );
+    line-height: 1.25;
 }
 
 
 /* =========================================================
-   NO RESULTS
+   NO SEARCH RESULTS
    ========================================================= */
 
 .no-results {
-    padding: 45px 10px;
+    display: none;
 
     text-align: center;
 
-    color: #94a3b8;
+    padding: 30px 10px;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
 }
 
 
 .no-results i {
-    font-size: 30px;
+    display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+
+    color: #00e5ff;
+
+    font-size: 24px;
 }
 
 
 /* =========================================================
-   BOTTOM NAVIGATION
+   BOTTOM SOCIAL BAR
    ========================================================= */
 
-.bottom-navigation {
-    position: absolute;
+.icons {
+    position: sticky;
 
-    left: 15px;
-    right: 15px;
-    bottom: 25px;
+    bottom: 0;
+
+    z-index: 20;
+
+    width: 100%;
+
+    height: 42px;
 
     display: flex;
 
     justify-content: space-around;
 
-    padding: 13px 8px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(15, 23, 42, 0.82);
-
-    border:
-        1px solid rgba(255,255,255,0.1);
-
-    backdrop-filter: blur(20px);
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.35);
-}
-
-
-.bottom-navigation a {
-    display: flex;
-
-    flex-direction: column;
-
     align-items: center;
 
-    gap: 4px;
+    margin-top: 5px;
 
-    color: #94a3b8;
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
 
-    font-size: 11px;
+    border-radius: 14px;
 
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-}
+    background:
+        rgba(20, 20, 20, 0.92);
 
+    backdrop-filter: blur(10px);
 
-.bottom-navigation a i {
-    font-size: 18px;
-}
+    -webkit-backdrop-filter: blur(10px);
 
-
-.bottom-navigation a:hover {
-    color: #22d3ee;
-
-    transform: translateY(-2px);
+    box-shadow:
+        0 -4px 15px
+        rgba(0, 0, 0, 0.3);
 }
 
 
 /* =========================================================
-   HOME INDICATOR
+   SOCIAL LINKS
    ========================================================= */
 
-.home-indicator {
-    position: absolute;
+.icons a {
+    display: flex;
 
-    bottom: 8px;
+    justify-content: center;
 
-    left: 50%;
+    align-items: center;
 
-    transform: translateX(-50%);
+    color: #ffffff;
 
-    width: 90px;
-    height: 4px;
+    font-size: 18px;
 
-    border-radius: 10px;
+    text-decoration: none;
 
-    background: #ffffff;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =========================================================
+   SOCIAL HOVER
+   ========================================================= */
+
+.icons a:hover {
+    color: #00e5ff;
+
+    transform: scale(1.2);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.screen::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.screen::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.screen::-webkit-scrollbar-thumb {
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 50px;
+}
+
+
+.screen::-webkit-scrollbar-thumb:hover {
+    background:
+        rgba(255, 255, 255, 0.45);
 }
 
 
@@ -581,46 +745,62 @@
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
 
-    .mobile-page {
-        padding: 0;
+    body {
+        padding: 10px;
     }
 
 
-    .phone {
-        min-height: 100vh;
+    .screen {
+        width: 320px;
 
-        border-radius: 0;
+        max-width: 92vw;
 
-        border: none;
+        height: 600px;
+
+        max-height: 90vh;
+
+        border-radius: 35px;
     }
 
 
-    .bottom-navigation {
-        bottom: 22px;
-    }
+    .status-icon {
+        width: 50px;
+        height: 50px;
 
-}
+        min-width: 50px;
+        min-height: 50px;
 
-
-@media (max-width: 360px) {
-
-    .app-icon {
-        width: 55px;
-        height: 55px;
-
-        font-size: 22px;
+        max-width: 50px;
+        max-height: 50px;
     }
 
 
-    .app-grid {
-        gap: 20px 10px;
+    .app-header h1 {
+        font-size: 20px;
     }
 
 
-    .app-item span {
-        font-size: 11px;
+    #currentDate {
+        font-size: 13px;
     }
 
+
+    #currentTime {
+        font-size: 23px;
+    }
+
+
+    .app i {
+        width: 52px;
+        height: 52px;
+
+        font-size: 19px;
+    }
+
+
+    .app span {
+        font-size: 9px;
+    }
 }

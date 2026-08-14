@@ -1,8 +1,15 @@
 from flask import Flask, render_template
-
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
+# =========================================
+# LOAD ENV
+# =========================================
+load_dotenv()
+
+OPENAI_API_KEY= os.environ.get("OPENWEATHER_API_KEY")
 
 # =========================================================
 # HOME / MOBILE PORTFOLIO
@@ -10,7 +17,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("fullmobile.html")
+    return render_template("index.html")
 
 
 # =========================================================
@@ -40,6 +47,9 @@ def cv():
     return render_template("cv.html")
 
 
+@app.route("/certificate")
+def certificate():
+    return render_template("certificate.html")
 # =========================================================
 # RUN APPLICATION
 # =========================================================

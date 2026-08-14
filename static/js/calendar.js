@@ -239,3 +239,42 @@ if (nextMonth) {
    ========================================================= */
 
 renderCalendar();
+
+// Appointment modal handling
+document.addEventListener('DOMContentLoaded', () => {
+  const addBtn = document.getElementById('addAppointmentBtn');
+  const modal = document.getElementById('addAppointmentModal');
+  const closeBtn = document.getElementById('closeModal');
+  const form = document.getElementById('appointmentForm');
+
+  if (addBtn && modal) {
+    addBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+    });
+  }
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  if (form && modal) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const title = document.getElementById('apptTitle').value;
+      const date = document.getElementById('apptDate').value;
+      const time = document.getElementById('apptTime').value;
+      const desc = document.getElementById('apptDesc').value;
+      const appointments = JSON.parse(localStorage.getItem('appointments') || '[]');
+      appointments.push({ title, date, time, desc });
+      localStorage.setItem('appointments', JSON.stringify(appointments));
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      form.reset();
+      console.log('Saved appointment', { title, date, time, desc });
+    });
+  }
+});
