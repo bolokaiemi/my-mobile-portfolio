@@ -17,7 +17,7 @@ OPENAI_API_KEY= os.environ.get("OPENWEATHER_API_KEY")
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("mobile.html")
 
 
 # =========================================================
