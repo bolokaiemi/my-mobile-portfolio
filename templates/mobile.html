@@ -22,15 +22,13 @@ My Mobile Portfolio
             <img
                 src="{{ url_for(
                     'static',
-                    filename='images/myworklinks/mylinks/ai-logo.jpg'
+                    filename='images/ai-logo.jpg'
                 ) }}"
-                alt="AI Portfolio Logo"
+                alt="AI Portfolio Logo" width="290" height="70"
                 class="status-icon"
             >
 
-            <span class="status-dot"></span>
 
-            <span>Portfolio</span>
 
         </div>
 
@@ -51,16 +49,14 @@ My Mobile Portfolio
          DATE & TIME
          ================================================= -->
 
-    <section
-        class="datetime-display"
-        aria-label="Current date and time"
-    >
-
-        <span id="currentDate"></span>
-
-        <span id="currentTime"></span>
-
-    </section>
+    <section class="datetime-display" aria-label="Current date and time" style="display:flex;align-items:center;gap:8px;">
+    <span id="currentDate"></span>
+    <span id="currentTime"></span>
+    <div class="weather-widget" aria-label="Current weather" style="display:flex;align-items:center;gap:4px;">
+        <i id="weatherIcon" class="fa-solid fa-cloud"></i>
+        <span id="weatherTemp"></span>
+    </div>
+</section>
 
 
     <!-- =================================================
