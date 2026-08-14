@@ -1,0 +1,419 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+My Mobile Portfolio
+{% endblock %}
+
+
+{% block content %}
+
+<div class="screen">
+
+
+    <!-- =================================================
+         APP HEADER
+         ================================================= -->
+
+    <header class="app-header">
+
+        <div class="status-indicator">
+
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='images/myworklinks/mylinks/ai-logo.jpg'
+                ) }}"
+                alt="AI Portfolio Logo"
+                class="status-icon"
+            >
+
+            <span class="status-dot"></span>
+
+            <span>Portfolio</span>
+
+        </div>
+
+
+        <h1>
+            My Portfolio
+        </h1>
+
+
+        <p class="header-subtitle">
+            AI &amp; Software Engineering
+        </p>
+
+    </header>
+
+
+    <!-- =================================================
+         DATE & TIME
+         ================================================= -->
+
+    <section
+        class="datetime-display"
+        aria-label="Current date and time"
+    >
+
+        <span id="currentDate"></span>
+
+        <span id="currentTime"></span>
+
+    </section>
+
+
+    <!-- =================================================
+         SEARCH
+         ================================================= -->
+
+    <div class="portfolio-search">
+
+        <i
+            class="fa-solid fa-magnifying-glass"
+            aria-hidden="true"
+        ></i>
+
+        <input
+            type="search"
+            id="portfolioSearch"
+            placeholder="Search portfolio..."
+            aria-label="Search portfolio"
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <!-- =================================================
+         APPS
+         ================================================= -->
+
+    <main
+        class="apps"
+        id="appsGrid"
+    >
+
+
+        <!-- PORTFOLIO -->
+
+        <a
+            href="https://portfolio-website-v81b.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="portfolio professional career"
+        >
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <span>Portfolio</span>
+
+        </a>
+
+
+        <!-- CINEMABOT -->
+
+        <a
+            href="https://movie-database-assistant.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="cinemabot movie ai movies"
+        >
+
+            <i class="fa-solid fa-clapperboard"></i>
+
+            <span>CinemaBot AI</span>
+
+        </a>
+
+
+        <!-- MOBILE UI -->
+
+        <a
+            href="https://mobile-phone-userinterface.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="mobile interface phone ui"
+        >
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <span>Mobile UI</span>
+
+        </a>
+
+
+        <!-- OMNISENTRY -->
+
+        <a
+            href="https://omminsentiry-ai.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="omnisentry ai security"
+        >
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>OmniSentry AI</span>
+
+        </a>
+
+
+        <!-- AI AUDITOR -->
+
+        <a
+            href="https://ai-auditor-wdba.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="ai auditor artificial intelligence"
+        >
+
+            <i class="fa-solid fa-clipboard"></i>
+
+            <span>AI Auditor</span>
+
+        </a>
+
+
+        <!-- SAMPLE MOVIE -->
+
+        <a
+            href="https://ebivienmovie.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="movie film sample"
+        >
+
+            <i class="fa-solid fa-film"></i>
+
+            <span>Sample Movie</span>
+
+        </a>
+
+
+        <!-- Gemini -->
+
+        <a
+            href="https://gemini.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="gemini ai"
+        >
+
+            <i class="fa-solid fa-robot"></i>
+
+            <span>Gemini</span>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            href="https://www.linkedin.com/in/ebi-emmerich-adehor/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="linkedin professional jobs"
+        >
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <span>LinkedIn</span>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            href="mailto:ebivien42@gmail.com"
+            class="app"
+            data-name="mail email contact"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>Mail</span>
+
+        </a>
+
+
+        <!-- GITHUB -->
+
+        <a
+            href="https://github.com/bolokaiemi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app"
+            data-name="github code programming projects"
+        >
+
+            <i class="fa-brands fa-github"></i>
+
+            <span>GitHub</span>
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a
+            href="tel:+491234567890"
+            class="app"
+            data-name="phone telephone call contact"
+        >
+
+            <i class="fa-solid fa-phone"></i>
+
+            <span>Call Me</span>
+
+        </a>
+
+
+        <!-- CALENDAR -->
+
+        <a
+            href="{{ url_for('calendar') }}"
+            class="app"
+            data-name="calendar appointment meeting schedule"
+        >
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <span>Calendar</span>
+
+        </a>
+
+
+        <!-- CV -->
+
+        <a
+            href="{{ url_for('cv') }}"
+            class="app"
+            data-name="cv resume curriculum vitae"
+        >
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>My CV</span>
+
+        </a>
+
+
+        <!-- CONTACT -->
+
+        <a
+            href="{{ url_for('contact') }}"
+            class="app"
+            data-name="contact message communication"
+        >
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <span>Contact</span>
+
+        </a>
+
+    </main>
+
+
+    <!-- =================================================
+         NO SEARCH RESULTS
+         ================================================= -->
+
+    <div
+        id="noResults"
+        class="no-results"
+        aria-live="polite"
+    >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <p>
+            No projects found.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         SOCIAL BAR
+         ================================================= -->
+
+    <nav
+        class="icons"
+        aria-label="Social media"
+    >
+
+        <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+        >
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+
+        <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+
+        <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+        >
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+
+        <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+        >
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+
+        <a
+            href="https://whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+    </nav>
+
+
+</div>
+
+{% endblock %}
+
+
+{% block extra_js %}
+
+<script
+    src="{{ url_for('static', filename='js/mobile.js') }}"
+></script>
+
+{% endblock %}

@@ -1,0 +1,245 @@
+/* =========================================================
+   CV PAGE
+   ========================================================= */
+
+.cv-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 30px 15px;
+}
+
+
+.cv-card {
+    width: 100%;
+    max-width: 800px;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15,23,42,0.9);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    color: #94a3b8;
+}
+
+
+.back-button:hover {
+    color: #22d3ee;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.cv-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+.cv-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #4c1d95
+        );
+
+    font-size: 28px;
+}
+
+
+.cv-header h1 {
+    font-size: 28px;
+}
+
+
+.cv-header p {
+    margin-top: 5px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+
+.cv-section h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    font-size: 19px;
+}
+
+
+.cv-section h2 i {
+    color: #22d3ee;
+}
+
+
+.cv-section p {
+    color: #cbd5e1;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.skills span {
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    color: #e2e8f0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.project {
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.04);
+}
+
+
+.project h3 {
+    margin-bottom: 6px;
+
+    font-size: 16px;
+
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.cv-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.cv-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 16px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    color: #e2e8f0;
+}
+
+
+.cv-links a:hover {
+    color: #22d3ee;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .cv-card {
+        padding: 22px;
+    }
+
+
+    .cv-header h1 {
+        font-size: 22px;
+    }
+
+}

@@ -1,0 +1,233 @@
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.page-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+
+.page-card {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15, 23, 42, 0.85);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+.back-button:hover {
+    color: #22d3ee;
+}
+
+
+/* =========================================================
+   PAGE ICON
+   ========================================================= */
+
+.page-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #2563eb
+        );
+
+    font-size: 27px;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.page-card h1 {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+
+.page-intro {
+    margin-bottom: 28px;
+
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #e2e8f0;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color: white;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #22d3ee;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.submit-button {
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #2563eb
+        );
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.submit-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT MESSAGE
+   ========================================================= */
+
+.contact-message {
+    margin-top: 20px;
+
+    color: #22d3ee;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-container {
+        padding: 15px;
+    }
+
+
+    .page-card {
+        padding: 23px;
+    }
+
+}

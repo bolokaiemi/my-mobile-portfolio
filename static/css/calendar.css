@@ -1,0 +1,279 @@
+/* =========================================================
+   CALENDAR
+   ========================================================= */
+
+.calendar-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.calendar-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 28px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15,23,42,0.9);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    color: #94a3b8;
+}
+
+
+.back-button:hover {
+    color: #22d3ee;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.calendar-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.calendar-heading > i {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444,
+            #991b1b
+        );
+
+    font-size: 25px;
+}
+
+
+.calendar-heading h1 {
+    font-size: 28px;
+}
+
+
+.calendar-heading p {
+    margin-top: 5px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.calendar-controls {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.calendar-controls button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,0.08);
+}
+
+
+.calendar-controls button:hover {
+    background:
+        rgba(34,211,238,0.2);
+}
+
+
+.calendar-controls h2 {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   WEEKDAYS
+   ========================================================= */
+
+.calendar-weekdays,
+.calendar-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 7px;
+}
+
+
+.calendar-weekdays {
+    margin-bottom: 8px;
+}
+
+
+.calendar-weekdays span {
+    padding: 8px 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CALENDAR DAYS
+   ========================================================= */
+
+.calendar-day {
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: #e2e8f0;
+
+    background:
+        rgba(255,255,255,0.05);
+}
+
+
+.calendar-day:hover {
+    background:
+        rgba(34,211,238,0.2);
+}
+
+
+.calendar-day.today {
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #2563eb
+        );
+
+    color: white;
+
+    font-weight: 700;
+}
+
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+
+/* =========================================================
+   SELECTED DATE
+   ========================================================= */
+
+.selected-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .calendar-page {
+        padding: 12px;
+    }
+
+
+    .calendar-card {
+        padding: 20px;
+    }
+
+
+    .calendar-day {
+        min-height: 40px;
+
+        font-size: 13px;
+    }
+
+}

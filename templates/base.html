@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {% block title %}
+        My Mobile Portfolio
+        {% endblock %}
+    </title>
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+
+    <!-- Mobile Portfolio CSS -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/mobile.css') }}"
+    >
+
+
+    <!-- Font Awesome 6 -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    {% block extra_css %}{% endblock %}
+
+</head>
+
+
+<body>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+CV | Ebi Emmerich-Adehor
+{% endblock %}
+
+
+{% block extra_css %}
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/cv.css') }}"
+>
+
+{% endblock %}
+
+
+{% block content %}
+
+<main class="cv-page">
+
+
+    <div class="cv-card">
+
+
+        <a
+            href="{{ url_for('home') }}"
+            class="back-button"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </a>
+
+
+        <header class="cv-header">
+
+            <div class="cv-icon">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+
+            <div>
+
+                <h1>
+                    Ebi Emmerich-Adehor
+                </h1>
+
+                <p>
+                    AI & Software Engineering
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PROFILE
+             ================================================= -->
+
+        <section class="cv-section">
+
+            <h2>
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </h2>
+
+
+            <p>
+
+                Computer Science graduate and AI/software
+                engineering learner focused on building
+                practical applications using Python, Flask,
+                JavaScript, APIs, databases, and AI technologies.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             SKILLS
+             ================================================= -->
+
+        <section class="cv-section">
+
+            <h2>
+                <i class="fa-solid fa-code"></i>
+                Technical Skills
+            </h2>
+
+
+            <div class="skills">
+
+                <span>Python</span>
+
+                <span>Flask</span>
+
+                <span>JavaScript</span>
+
+                <span>HTML</span>
+
+                <span>CSS</span>
+
+                <span>SQL</span>
+
+                <span>SQLite</span>
+
+                <span>PostgreSQL</span>
+
+                <span>SQLAlchemy</span>
+
+                <span>REST APIs</span>
+
+                <span>AI</span>
+
+                <span>LLMs</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+             ================================================= -->
+
+        <section class="cv-section">
+
+            <h2>
+                <i class="fa-solid fa-diagram-project"></i>
+                Projects
+            </h2>
+
+
+            <div class="project">
+
+                <h3>
+                    CinemaBot AI
+                </h3>
+
+                <p>
+                    AI-powered movie database assistant
+                    integrating movie APIs and conversational
+                    functionality.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    OmniSentry AI
+                </h3>
+
+                <p>
+                    AI-based website trust and verification
+                    platform.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    AI Auditor
+                </h3>
+
+                <p>
+                    AI auditing platform designed to support
+                    software and information auditing workflows.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Mobile Portfolio
+                </h3>
+
+                <p>
+                    Mobile-first portfolio application built
+                    with Flask, Jinja2, HTML, CSS, JavaScript,
+                    and Font Awesome.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROFILES
+             ================================================= -->
+
+        <section class="cv-section">
+
+            <h2>
+                <i class="fa-solid fa-link"></i>
+                Profiles
+            </h2>
+
+
+            <div class="cv-links">
+
+                <a
+                    href="https://github.com/bolokaiemi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                    GitHub
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/ebi-emmerich-adehor/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    LinkedIn
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+{% endblock %}
