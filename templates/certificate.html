@@ -27,10 +27,10 @@
             <!-- SOFTWARE ENGINEERING CERTIFICATE -->
 
             <a href="{{ url_for('static', filename='certificates/software-engineering.pdf') }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="certification-card"
-                data-pdf="{{ url_for('static', filename='certificates/software-engineering.pdf') }}">
+               target="_blank"
+               rel="noopener noreferrer"
+               class="certification-card"
+               data-pdf="{{ url_for('static', filename='certificates/software-engineering.pdf') }}">
 
                 <div class="certification-card-icon">
                     <i class="fa-solid fa-code"></i>
@@ -59,13 +59,14 @@
 
             </a>
 
+
             <!-- AI ENGINEERING CERTIFICATE -->
 
             <a href="{{ url_for('static', filename='certificates/ai-engineering.pdf') }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="certification-card"
-                data-pdf="{{ url_for('static', filename='certificates/zeugnise.pdf') }}">
+               target="_blank"
+               rel="noopener noreferrer"
+               class="certification-card"
+               data-pdf="{{ url_for('static', filename='certificates/ai-engineering.pdf') }}">
 
                 <div class="certification-card-icon">
                     <i class="fa-solid fa-brain"></i>
@@ -94,13 +95,14 @@
 
             </a>
 
+
             <!-- PYTHON CERTIFICATE -->
 
             <a href="{{ url_for('static', filename='certificates/hackathon.pdf') }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="certification-card"
-                data-pdf="{{ url_for('static', filename='certificates/hackathon.pdf') }}">
+               target="_blank"
+               rel="noopener noreferrer"
+               class="certification-card"
+               data-pdf="{{ url_for('static', filename='certificates/hackathon.pdf') }}">
 
                 <div class="certification-card-icon">
                     <i class="fa-brands fa-python"></i>
@@ -115,7 +117,85 @@
                     </p>
 
                     <p class="certificate-description">
-                       Successfully completed the Python Innovation Hackathon, gaining hands-on experience in problem-solving, innovative design, project planning, Python development, and technical presentation. The hackathon strengthened practical software engineering skills through the development and presentation of a Python-based solution to a real-world challenge.
+                        Successfully completed the Python Innovation Hackathon,
+                        gaining hands-on experience in problem-solving,
+                        innovative design, project planning, Python development,
+                        and technical presentation. The hackathon strengthened
+                        practical software engineering skills through the
+                        development and presentation of a Python-based solution
+                        to a real-world challenge.
+                    </p>
+
+                    <span class="certificate-button">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View Certificate
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- COMBINED CERTIFICATION -->
+
+            <a href="{{ url_for('static', filename='certificates/complete-merged-certificate.pdf') }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="certification-card"
+               data-pdf="{{ url_for('static', filename='certificates/complete-merged-certificate.pdf') }}">
+
+                <div class="certification-card-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div class="certification-card-content">
+
+                    <h2>All In One Combine</h2>
+
+                    <p class="certificate-provider">
+                        All Combine Certification
+                    </p>
+
+                    <p class="certificate-description">
+                        A comprehensive collection of certifications demonstrating
+                        expertise in advanced software development, artificial
+                        intelligence integration, and modern engineering practices.
+                    </p>
+
+                    <span class="certificate-button">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View Certificate
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROFESSIONAL FEEDBACK -->
+
+            <a href="{{ url_for('static', filename='certificates/zeugnise.pdf') }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="certification-card"
+               data-pdf="{{ url_for('static', filename='certificates/zeugnise.pdf') }}">
+
+                <div class="certification-card-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div class="certification-card-content">
+
+                    <h2>Profession Feedback</h2>
+
+                    <p class="certificate-provider">
+                        Profession Feedback
+                    </p>
+
+                    <p class="certificate-description">
+                        Earned certification in a specialized field,
+                        strengthening problem-solving, technical, and
+                        project management abilities.
                     </p>
 
                     <span class="certificate-button">
@@ -131,22 +211,43 @@
 
     </div>
 
+
     <!-- Modal for PDF preview -->
+
     <div id="certModal" class="cert-modal hidden">
+
         <div class="cert-modal-content">
-            <button id="closeCertModal" class="cert-modal-close">&times;</button>
-            <iframe id="certModalIframe" src="" frameborder="0" class="cert-modal-iframe"></iframe>
+
+            <button id="closeCertModal" class="cert-modal-close">
+                &times;
+            </button>
+
+            <iframe
+                id="certModalIframe"
+                src=""
+                frameborder="0"
+                class="cert-modal-iframe">
+            </iframe>
+
         </div>
+
     </div>
 
 </section>
 
 {% endblock %}
 
+
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/certificate.css') }}">
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/certificate.css') }}">
+
 {% endblock %}
 
+
 {% block extra_js %}
+
 <script src="{{ url_for('static', filename='js/certificate.js') }}"></script>
+
 {% endblock %}
