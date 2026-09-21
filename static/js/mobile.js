@@ -136,3 +136,36 @@ function getWeather(lat, lon) {
 // Initial fetch and periodic update (every 10 minutes)
 fetchWeather();
 setInterval(fetchWeather, 10 * 60 * 1000);
+
+
+//Backtop or scroll to top
+const scrollButton = document.getElementById("scroll-button");
+scrollButton.addEventListener('click', function() {
+    document.querySelector('.scroll-container').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+//3 mins time out
+
+let inactivityTime = function () {
+    let time;
+
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.ontouchstart = resetTimer;
+
+    function logout() {
+        window.location.href = '/logout';
+    }
+
+    function resetTimer() {
+        clearTimeout(time);
+        time = setTimeout(logout, 5000);
+        console.log("interaction detected")
+    }
+};
+
+inactivityTime();

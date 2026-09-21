@@ -1,3 +1,8 @@
 gunicorn
 flask
 python-dotenv
+pip~=25.1.1
+attrs~=26.1.0
+distro~=1.9.0
+cryptography~=49.0.0
+filelock~=3.29.0

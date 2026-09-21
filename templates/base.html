@@ -16,12 +16,50 @@
         {% endblock %}
     </title>
 
+ <style>
+        @keyframes scrollUp {
+          0% { transform: translateY(100%); }
+          100% { transform: translateY(-100%); }
+        }
+
+        .scroll-container {
+          height: 100vh;
+          overflow: auto;
+          position: relative;
+        }
+
+
+        #scroll-button{
+            position: fixed;
+            bottom: 1px;
+            right: 25px;
+            padding: 10px;
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+        }
+        .skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 10000;
+}
+    </style>
 
     <!-- Main CSS -->
 
     <link
         rel="stylesheet"
         href="{{ url_for('static', filename='css/style.css') }}"
+    >
+     <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/certificate.css') }}"
     >
 
 
@@ -48,6 +86,9 @@
 
 <body>
 
+ <div class="scroll-container">
+      <div class="scroll-content">
+
     {% block content %}
 
     {% endblock %}
@@ -55,6 +96,14 @@
 
     {% block extra_js %}{% endblock %}
 
+
+
+
+</div>
+</div>
+<button id="scroll-button" type="button" aria-label="Scroll to top">
+    ↑
+</button>
 </body>
 
 </html>
