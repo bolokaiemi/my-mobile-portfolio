@@ -24,7 +24,7 @@ The project is currently built as a web-based mobile interface using **HTML, CSS
 * 📧 Email contact shortcut
 * 🌐 Social media shortcuts
 * 📜 Scrollable mobile screen
-* 🌤️ Live weather display with location‑aware icon and temperature (abbreviated date)
+* 📱 Responsive design
 * 🎨 Gradient app icons
 * ✨ Hover animations
 * ⭐ Font Awesome 6 icons
@@ -211,6 +211,7 @@ Simply open:
 
 ```text
 index.html
+```
 
 in a modern web browser.
 
@@ -343,8 +344,11 @@ my-mobile-portfolio/
     │
     └── images/
         │
-        └── ai-logo.jpg
+        └── myworklinks/
+            │
+            └── mylinks/
+                └── ai-logo.jpg
 
 ## 🆕 Latest Update
 
-- Added CSS constraints to the `.screen` container to limit width to 375 px and center the content, providing a mobile‑like appearance on larger screens.
+- Added CSS constraints to the `.screen` container to limit width to 375 px and center the content, providing a mobile‑like appearance on larger screens.
