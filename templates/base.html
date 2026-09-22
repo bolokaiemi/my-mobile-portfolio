@@ -52,7 +52,15 @@
     </style>
 
     <!-- Main CSS -->
+<link rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      type="image/x-icon">
 
+
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/datenimpress.css') }}"
+>
     <link
         rel="stylesheet"
         href="{{ url_for('static', filename='css/style.css') }}"
@@ -60,6 +68,10 @@
      <link
         rel="stylesheet"
         href="{{ url_for('static', filename='css/certificate.css') }}"
+    >
+     <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/legal.css') }}"
     >
 
 
@@ -97,7 +109,19 @@
     {% block extra_js %}{% endblock %}
 
 
+<footer class="site-legal-footer">
 
+    <a href="{{ url_for('impressum') }}">
+        Impressum
+    </a>
+
+    <span aria-hidden="true">•</span>
+
+    <a href="{{ url_for('datenschutz') }}">
+        Datenschutz
+    </a>
+
+</footer>
 
 </div>
 </div>

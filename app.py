@@ -50,6 +50,22 @@ def cv():
 @app.route("/certificate")
 def certificate():
     return render_template("certificate.html")
+
+
+# =========================================================
+# LEGAL PAGES
+# =========================================================
+
+@app.route("/datenschutz")
+def datenschutz():
+    return render_template("datenschutz.html")
+
+
+@app.route("/impressum")
+def impressum():
+    return render_template("impressum.html")
+
+
 # =========================================================
 # RUN APPLICATION
 # =========================================================

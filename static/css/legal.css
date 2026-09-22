@@ -1,0 +1,33 @@
+/* =========================================================
+   LEGAL FOOTER
+   ========================================================= */
+
+.site-legal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+.site-legal-footer a {
+    color: #94a3b8;
+
+    transition: color 0.2s ease;
+}
+
+
+.site-legal-footer a:hover {
+    color: #22d3ee;
+}
